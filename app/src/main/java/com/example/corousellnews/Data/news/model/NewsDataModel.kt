@@ -2,7 +2,7 @@ package com.example.corousellnews.Data.news.model
 
 import com.example.corousellnews.Domain.news.model.NewsDomainModel
 
-data class NewsRemoteModel(
+data class NewsDataModel(
     val id: String?,
     val title: String?,
     val description: String?,
@@ -11,7 +11,7 @@ data class NewsRemoteModel(
     val rank: String?
 )
 
-fun NewsRemoteModel.toNewsDataModel(): NewsDataModel = NewsDataModel(
+fun NewsDataModel.toNewsDomainModel(): NewsDomainModel = NewsDomainModel(
     this.id,
     this.title,
     this.description,
