@@ -43,11 +43,16 @@ dependencies {
     implementation deps.Okhttp
     implementation deps.Loging
     implementation deps.Gson
+    implementation deps.Rxjavaadapter
 
     //hilt
     implementation deps.Hilt
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
+
+    //rxjava
+    implementation deps.Rxandroid
+    implementation deps.Rxjava
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.fragment:fragment-ktx:1.1.0'

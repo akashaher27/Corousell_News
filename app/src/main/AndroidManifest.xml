@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.corousellnews">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:name=".app.NewsApplication"
@@ -15,7 +17,7 @@
         android:theme="@style/base_material_theme">
         tools:targetApi="31">
         <activity
-            android:name=".Presenter.news.view.NewsActivity"
+            android:name=".presenter.news.view.NewsActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

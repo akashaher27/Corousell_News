@@ -1,11 +1,11 @@
 package com.example.corousellnews.app.hilt
 
-import com.example.corousellnews.Data.news.remote.NewsApi
-import com.example.corousellnews.Data.news.remote.NewsApiImp
-import com.example.corousellnews.Data.news.repo.NewsRepo
-import com.example.corousellnews.Data.news.repo.NewsRepoImp
-import com.example.corousellnews.Domain.news.NewsInteractor
-import com.example.corousellnews.Domain.news.NewsInteractorImp
+import com.example.corousellnews.data.news.remote.NewsApi
+import com.example.corousellnews.data.news.remote.NewsApiImp
+import com.example.corousellnews.data.news.repo.NewsRepo
+import com.example.corousellnews.data.news.repo.NewsRepoImp
+import com.example.corousellnews.domain.news.NewsInteractor
+import com.example.corousellnews.domain.news.NewsInteractorImp
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
