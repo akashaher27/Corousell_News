@@ -2,6 +2,7 @@
 
 buildscript {
     ext.kotlin_version = '1.3.61'
+    ext.hilt_version = '2.40'
 
     dependencies {
         classpath "com.android.tools.build:gradle:7.0.3"
@@ -14,14 +15,16 @@ buildscript {
     ext {
         versions = [
                 'Retrofit'  : '2.9.0',
-                'Okhttp'    : '4.9.3'
+                'Okhttp'    : '4.9.3',
+                'Hilt'      : '2.40'
         ]
         deps = [
 
                 'Retrofit'     : "com.squareup.retrofit2:retrofit:${versions.Retrofit}",
                 'Okhttp'       : "com.squareup.okhttp3:okhttp:${versions.Okhttp}",
                 'Gson'         : "com.squareup.retrofit2:converter-gson:${versions.Retrofit}",
-                'Loging'       : "com.squareup.okhttp3:logging-interceptor:${versions.Okhttp}"
+                'Loging'       : "com.squareup.okhttp3:logging-interceptor:${versions.Okhttp}",
+                'Hilt'         : "com.google.dagger:hilt-android:${versions.Hilt}",
         ]
     }
 }
