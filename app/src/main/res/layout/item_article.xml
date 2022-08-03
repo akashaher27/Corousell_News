@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_normal">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvArticle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/padding_normal">
+
+            <ImageView
+                android:id="@+id/ivBanner"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"/>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:textAppearance="@style/TextAppearance_Title"
+                android:textColor="#FF262629"
+                android:maxLines="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_extraSmall"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:text="Hi rita12399, thank you for being awesome on Carousell! We want more Carousellers see you and your listings and hope you can keep up the good listings and bring good experience to fellow Carousellers."/>
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:textAppearance="@style/TextAppearance_Body"
+                android:textColor="#FF262629"
+                android:maxLines="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:text="Hi rita12399, thank you for being awesome on Carousell! We want more Carousellers see you and your listings and hope you can keep up the good listings and bring good experience to fellow Carousellers."/>
+
+            <TextView
+                android:id="@+id/tvTimeSpan"
+                android:textAppearance="@style/TextAppearance_Subtitle"
+                android:textColor="#FF8F939C"
+                android:maxLines="2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_tiny"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:text="@string/app_name"/>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

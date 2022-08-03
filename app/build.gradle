@@ -32,6 +32,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    viewBinding {
+        enabled true
+    }
 }
 
 dependencies {
@@ -53,6 +56,10 @@ dependencies {
     //rxjava
     implementation deps.Rxandroid
     implementation deps.Rxjava
+
+    //glide
+    implementation deps.Glide
+    kapt  "com.github.bumptech.glide:compiler:${versions.Glide}"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.fragment:fragment-ktx:1.1.0'
