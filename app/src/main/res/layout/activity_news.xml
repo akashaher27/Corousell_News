@@ -8,7 +8,7 @@
     tools:context=".presenter.news.view.NewsActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/toolbar"
+        android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -16,8 +16,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/app_name"
+            android:textSize="16px"
+            app:titleMarginStart="@dimen/margin_large"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.example.common.view.recyclerview.AdvanceRecyclerView
@@ -27,7 +31,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/appbar" />
 
     <ProgressBar
         android:id="@+id/progressBar"

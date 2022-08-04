@@ -9,8 +9,8 @@
         <item name="subtitleTextAppearance">@style/TextAppearance_Subtitle_Toolbar</item>
     </style>
     <style name="ThemeOverlay_Toolbar_Standard">
-        <item name="colorPrimary">@color/deep_purple</item>
-        <item name="colorPrimaryVariant">@color/deep_purple_dark</item>
+        <item name="colorPrimary">@color/red_700</item>
+        <item name="colorPrimaryVariant">@color/red_900</item>
         <item name="colorOnPrimary">@color/white</item>
     </style>
 

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
+import androidx.core.view.marginStart
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.corousellnews.R
 import com.example.corousellnews.databinding.ActivityNewsBinding
@@ -37,7 +38,6 @@ class NewsActivity : AppCompatActivity() {
             adapter = ArticleAdapter(mutableListOf())
             it.adapter = adapter
         }
-
         makeNetworkCall()
         setupObserver()
     }

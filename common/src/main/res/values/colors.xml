@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="deep_purple">#673ab7</color>
-    <color name="deep_purple_dark">#320b86</color>
-    <color name="deep_purple_50">#ede7f6</color>
+    <color name="red_900">#B71C1C</color>
+    <color name="red_700">#D50000</color>
 
     <color name="light_green">#c5e1a5</color>
     <color name="light_green_dark">#94af76</color>
