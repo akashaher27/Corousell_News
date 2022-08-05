@@ -60,5 +60,6 @@ data class ArticleModel(
     var description: String?,
     var banner_url: String?,
     var time_created: String?,
+    var timeSpanMillis: Long?,
     var rank: String?
 ) : Item()

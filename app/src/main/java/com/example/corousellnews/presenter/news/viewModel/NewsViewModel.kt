@@ -2,10 +2,12 @@ package com.example.corousellnews.presenter.viewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.example.common.util.DateUtil
 import com.example.corousellnews.domain.news.NewsInteractor
 import com.example.corousellnews.domain.news.model.toNewsPresenterModel
 import com.example.corousellnews.presenter.news.BaseViewModel
 import com.example.corousellnews.presenter.news.model.NewsPresenterModel
+import com.example.corousellnews.presenter.news.view.ArticleModel
 import com.example.practiceproject.app.remote.retrofit.OnError
 import com.example.practiceproject.app.remote.retrofit.Response
 import com.example.practiceproject.app.remote.retrofit.Success
@@ -44,5 +46,21 @@ class NewsViewModel @Inject constructor(val newsInteractor: NewsInteractor) : Ba
 
         }
 
+    }
+
+    fun sortArticleByTime(): List<ArticleModel> {
+        var list = newsArticleLiveData.value?.data?.articleList
+        list?.sortByDescending {
+            it.timeSpanMillis
+        }
+        return list?.toList() ?: emptyList()
+    }
+
+    fun getArticleByPopularity(): List<ArticleModel> {
+        var list = newsArticleLiveData.value?.data?.articleList
+        list?.sortBy {
+            it.rank
+        }
+        return list?.toList() ?: emptyList()
     }
 }

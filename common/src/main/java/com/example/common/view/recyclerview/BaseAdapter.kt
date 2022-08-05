@@ -21,6 +21,7 @@ abstract class BaseAdapter<T : Item>(list: MutableList<T>) : RecyclerView.Adapte
     }
 
     fun addItems(list: List<T>) {
+        baseList.clear()
         baseList.addAll(list)
         notifyDataSetChanged()
     }

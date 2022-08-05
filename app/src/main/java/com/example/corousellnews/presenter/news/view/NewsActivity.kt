@@ -1,11 +1,11 @@
 package com.example.corousellnews.presenter.news.view
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import androidx.activity.viewModels
-import androidx.core.view.marginStart
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.corousellnews.R
 import com.example.corousellnews.databinding.ActivityNewsBinding
@@ -40,6 +40,23 @@ class NewsActivity : AppCompatActivity() {
         }
         makeNetworkCall()
         setupObserver()
+        setupListener()
+    }
+
+    private fun setupListener() {
+        binding?.toolbar?.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.action_recent -> {
+                    sortArticleByTime()
+                    true
+                }
+                R.id.action_popular -> {
+                    sortArticleByPopularity()
+                    true
+                }
+                else -> super.onOptionsItemSelected(it)
+            }
+        }
     }
 
     private fun setupObserver() {
@@ -48,7 +65,7 @@ class NewsActivity : AppCompatActivity() {
         }
     }
 
-    private fun handleNewArticleReponse(response:Response<NewsPresenterModel>) {
+    private fun handleNewArticleReponse(response: Response<NewsPresenterModel>) {
         when (response) {
             is Loading -> {
                 progressBar.visibility = View.VISIBLE
@@ -68,4 +85,13 @@ class NewsActivity : AppCompatActivity() {
     private fun makeNetworkCall() {
         viewmodel.fetchNewsArticles()
     }
+
+    private fun sortArticleByPopularity() {
+        adapter.addItems(viewmodel.getArticleByPopularity())
+    }
+
+    private fun sortArticleByTime() {
+        adapter.addItems(viewmodel.sortArticleByTime())
+    }
+
 }
