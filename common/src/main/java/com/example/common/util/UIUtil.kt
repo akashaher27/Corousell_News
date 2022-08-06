@@ -1,7 +1,9 @@
+
 package com.example.common.util
 
 import android.app.Activity
 import android.content.Context
+import android.net.ConnectivityManager
 import android.text.Editable
 import android.util.TypedValue
 import android.view.View
@@ -51,4 +53,9 @@ fun getFragmentManager(context: Context?): FragmentManager? {
         is ContextThemeWrapper -> getFragmentManager(context.baseContext)
         else -> null
     }
+}
+
+fun Context.isNetworkConnected(): Boolean {
+    val cm = getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+    return cm.activeNetworkInfo != null
 }

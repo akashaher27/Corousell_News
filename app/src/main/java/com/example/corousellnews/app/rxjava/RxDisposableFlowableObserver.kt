@@ -24,6 +24,7 @@ abstract class RxDisposableFlowableObserver<T>(private val uiResolution: UiResol
             is SSLPiningException -> {}
             is InvalidUploadFormatException -> {}
             is InternalServerException -> {}
+
             else -> {
             }
         }

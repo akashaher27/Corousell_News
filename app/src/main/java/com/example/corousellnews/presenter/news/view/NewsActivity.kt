@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.common.view.recyclerview.EmptyErrorView
 import com.example.corousellnews.R
 import com.example.corousellnews.databinding.ActivityNewsBinding
+import com.example.corousellnews.presenter.BaseActivity
 import com.example.corousellnews.presenter.news.model.NewsPresenterModel
 import com.example.corousellnews.presenter.viewModel.NewsViewModel
 import com.example.practiceproject.app.remote.retrofit.Loading
@@ -20,7 +21,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_news.*
 
 @AndroidEntryPoint
-class NewsActivity : AppCompatActivity() {
+class NewsActivity :BaseActivity(){
 
     private val viewmodel: NewsViewModel by viewModels()
     private var binding: ActivityNewsBinding? = null

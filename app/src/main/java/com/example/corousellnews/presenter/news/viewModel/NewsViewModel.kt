@@ -2,10 +2,9 @@ package com.example.corousellnews.presenter.viewModel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.common.util.DateUtil
 import com.example.corousellnews.domain.news.NewsInteractor
 import com.example.corousellnews.domain.news.model.toNewsPresenterModel
-import com.example.corousellnews.presenter.news.BaseViewModel
+import com.example.corousellnews.presenter.BaseViewModel
 import com.example.corousellnews.presenter.news.model.NewsPresenterModel
 import com.example.corousellnews.presenter.news.view.ArticleModel
 import com.example.practiceproject.app.remote.retrofit.Loading

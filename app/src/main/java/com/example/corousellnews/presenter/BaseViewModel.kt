@@ -1,4 +1,4 @@
-package com.example.corousellnews.presenter.news
+package com.example.corousellnews.presenter
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -17,7 +17,6 @@ open class BaseViewModel() : ViewModel() {
     }
 
     fun getNetworkError(): LiveData<ErrorResolution> = errorResolution
-
 
     protected fun addDisposable(disposable: Disposable) {
         compositeDisposable.add(disposable)

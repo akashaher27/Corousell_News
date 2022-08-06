@@ -7,3 +7,4 @@ interface Resolution : HttpResolution
 interface HttpResolution {
     fun onHttpException(httpException: ServerException)
 }
+
