@@ -8,7 +8,6 @@ import android.view.View
 import android.widget.LinearLayout
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.common.R
-import com.example.common.databinding.EmptyErrorViewBinding
 import kotlinx.android.synthetic.main.empty_error_view.view.*
 
 /**

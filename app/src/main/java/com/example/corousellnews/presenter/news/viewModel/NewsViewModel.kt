@@ -8,6 +8,7 @@ import com.example.corousellnews.domain.news.model.toNewsPresenterModel
 import com.example.corousellnews.presenter.news.BaseViewModel
 import com.example.corousellnews.presenter.news.model.NewsPresenterModel
 import com.example.corousellnews.presenter.news.view.ArticleModel
+import com.example.practiceproject.app.remote.retrofit.Loading
 import com.example.practiceproject.app.remote.retrofit.OnError
 import com.example.practiceproject.app.remote.retrofit.Response
 import com.example.practiceproject.app.remote.retrofit.Success
@@ -23,6 +24,7 @@ class NewsViewModel @Inject constructor(val newsInteractor: NewsInteractor) : Ba
     private var newsArticleLiveData = MutableLiveData<Response<NewsPresenterModel>>()
     fun getNewArticles(): LiveData<Response<NewsPresenterModel>> = newsArticleLiveData
     fun fetchNewsArticles() {
+        newsArticleLiveData.value = Loading()
         addDisposable(newsInteractor.getNewsArticle()
             .map {
                 it.toNewsPresenterModel()

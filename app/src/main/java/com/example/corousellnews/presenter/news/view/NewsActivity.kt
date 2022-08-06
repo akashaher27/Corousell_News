@@ -7,6 +7,7 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.common.view.recyclerview.EmptyErrorView
 import com.example.corousellnews.R
 import com.example.corousellnews.databinding.ActivityNewsBinding
 import com.example.corousellnews.presenter.news.model.NewsPresenterModel
@@ -38,6 +39,7 @@ class NewsActivity : AppCompatActivity() {
             adapter = ArticleAdapter(mutableListOf())
             it.adapter = adapter
         }
+        binding?.arvArticlesList?.addErrorView(EmptyErrorView(this))
         makeNetworkCall()
         setupObserver()
         setupListener()
